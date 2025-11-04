@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EcoWave | 하나의 물결이 변화를 만든다</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Noto+Sans+KR:wght@400;700&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Noto Sans KR', sans-serif;
+      color: #333;
+      background-color: #f9fafb;
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(10px);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 3rem;
+      z-index: 1000;
+      box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    header h1 {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 700;
+      color: #0077b6;
+      letter-spacing: 1px;
+    }
+
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #333;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #0077b6;
+    }
+
+    section {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 4rem 2rem;
+      text-align: center;
+    }
+
+    #home {
+      background: linear-gradient(to bottom right, #90e0ef, #00b4d8);
+      color: white;
+    }
+
+    #home h2 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    #home p {
+      font-size: 1.3rem;
+      max-width: 600px;
+    }
+
+    #about {
+      background-color: #f9fafb;
+    }
+
+    #activities {
+      background-color: #e3f2fd;
+    }
+
+    #campaign {
+      background-color: #caf0f8;
+    }
+
+    #news {
+      background-color: #f1f1f1;
+    }
+
+    #contact {
+      background-color: #d9f8ff;
+    }
+
+    h2 {
+      font-size: 2rem;
+      color: #0077b6;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      max-width: 700px;
+      line-height: 1.7;
+      font-size: 1.1rem;
+      margin-bottom: 1rem;
+    }
+
+    button {
+      margin-top: 1.5rem;
+      padding: 0.8rem 1.6rem;
+      border: none;
+      border-radius: 30px;
+      background-color: #0077b6;
+      color: white;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background-color: #0096c7;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #0077b6;
+      color: white;
+    }
+
+    /* 스크롤 애니메이션 */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 1s ease, transform 1s ease;
+    }
+
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>🌊 EcoWave</h1>
+    <nav>
+      <a href="#home">홈</a>
+      <a href="#about">소개</a>
+      <a href="#activities">핵심활동</a>
+      <a href="#campaign">캠페인참여</a>
+      <a href="#news">뉴스/스토리</a>
+      <a href="#contact">후원/문의</a>
+    </nav>
+  </header>
+
+  <section id="home">
+    <h2>하나의 물결이 변화를 만든다</h2>
+    <p>EcoWave는 청소년이 주도하는 해양 환경 비영리재단으로,  
+       깨끗한 바다와 지속 가능한 생태계를 위해 행동합니다.</p>
+    <button onclick="scrollToSection('about')">시작하기</button>
+  </section>
+
+  <section id="about" class="fade-in">
+    <h2>🌊 EcoWave 소개</h2>
+    <p>우리는 해양 쓰레기 문제의 심각성을 알리고, 직접 행동으로 변화를 만들어가는 청소년 중심의 재단입니다.  
+       ‘작은 물결이 큰 변화를 만든다’는 믿음으로, 바다의 생명을 지키기 위한 다양한 활동을 이어가고 있습니다.</p>
+  </section>
+
+  <section id="activities" class="fade-in">
+    <h2>🌱 핵심활동</h2>
+    <p>1️⃣ 해변 정화 캠페인 정기 진행<br>
+       2️⃣ 해양 생물 서식지 복원 프로젝트<br>
+       3️⃣ 친환경 생활 실천 워크숍 및 전시<br>
+       4️⃣ 해양 환경 교육 콘텐츠 제작</p>
+  </section>
+
+  <section id="campaign" class="fade-in">
+    <h2>🤝 캠페인 참여</h2>
+    <p>EcoWave의 해양 정화 캠페인에 누구나 참여할 수 있습니다.<br>
+       바닷가 쓰레기 수거, 환경 포스터 제작, SNS 챌린지 등 다양한 방식으로 함께하세요.</p>
+    <button onclick="alert('참여 신청은 곧 열릴 예정입니다!')">참여하기</button>
+  </section>
+
+  <section id="news" class="fade-in">
+    <h2>📰 뉴스 / 스토리</h2>
+    <p>📅 2025.10 — 제3회 EcoWave 해양 정화 캠페인 진행<br>
+       📅 2025.08 — “플라스틱 제로 챌린지” 참여자 1,000명 돌파<br>
+       📅 2025.06 — 통영 앞바다 서식지 복원 프로젝트 개시</p>
+  </section>
+
+  <section id="contact" class="fade-in">
+    <h2>📩 후원 / 문의</h2>
+    <p>이코웨이브 재단과 함께 바다를 지켜주세요.<br>
+       문의: ecowave.foundation@gmail.com<br>
+       인스타그램: <b>@eco_wave_official</b></p>
+    <button onclick="alert('감사합니다! 후원 관련 안내는 곧 추가됩니다.')">후원하기</button>
+  </section>
+
+  <footer>
+    © 2025 EcoWave Foundation | 하나의 물결이 변화를 만든다
+  </footer>
+
+  <script>
+    function scrollToSection(id) {
+      document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+    }
+
+    const fadeEls = document.querySelectorAll('.fade-in');
+    window.addEventListener('scroll', () => {
+      fadeEls.forEach(el => {
+        const rect = el.getBoundingClientRect();
+        if (rect.top < window.innerHeight - 100) {
+          el.classList.add('visible');
+        }
+      });
+    });
+  </script>
+</body>
+</html>
